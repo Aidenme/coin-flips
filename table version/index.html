@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="sq"></div>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" id="userInput" oninput="syncText()">
+                    <span id="printOutput" class="print-only"></span>
+                </td>
+                <td>
+                    <textarea class="category" name="category"></textarea>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </body>
+
+    <script>
+        function syncText() {
+            
+            let text = document.getElementById("userInput").value;
+
+            document.getElementById("printOutput").innerHTML = text;
+        }
+    </script>
+</html>

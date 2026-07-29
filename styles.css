@@ -1,0 +1,118 @@
+@media print {
+    @page {
+        size: letter;
+        margin:10mm;
+    }
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+
+    /*Offsets the negative margins for the whole grid that are needed to do a "border collapse" in .grid-item*/
+    padding-top: 1px;
+    padding-left: 1px;
+}
+
+.grid-item {
+    position: relative;
+    border: 1px solid;
+    height: 50mm;
+    width: 50mm;
+
+    /*Causes a border collapse so lines between grid items aren't twice as thick as they should be*/
+    margin-top: -1px;
+    margin-left: -1px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.year {
+    position: relative;
+    top: 4px;
+    left: 6px;
+    align-self: flex-start;
+    line-height: 1;
+    margin-bottom: 0px;
+
+    font-family: 'Segoe UI';
+    font-size: 17px;
+}
+
+.mint {
+    position: relative;
+    top: 3px;
+    left: 7px;
+    align-self: flex-start;
+
+    font-family: "Franklin Gothic Medium";
+    font-size: 15px;
+}
+
+.note {
+    position: static;
+    margin-top: 27mm;
+
+    width: auto;
+    max-width: 80%;
+    padding: 2mm 4mm;
+    
+    text-align: center;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.id {
+    position: absolute;
+    bottom: 0mm;
+    right: 1mm;
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace; font-weight: bold;
+}
+
+.flag {
+    position: absolute;
+    top:1.5mm;
+    right:1.5mm;
+    height: 6.5mm;
+}
+
+.applflag {
+    position: absolute;
+    top: 0mm;
+    right: 1mm;
+    height: 10mm;
+}
+
+.circle {
+    /*Sets the size and border of the circle*/
+    width: 20.5mm;
+    height: 20.5mm;
+    /*Border none so I don't get lines on cut outs. Set to 1px solid if you want to see it for reference*/
+    border: none;
+    border-radius: 50%;
+    /*Centers the circle and prevents it from influencing anything*/
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    /*The position and look of the + sign in the circle*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.cross {
+
+    /*Transform so the circle cutter's center gauge lines up since it is slightly off*/
+    transform: translate(-1px, -1px)
+}

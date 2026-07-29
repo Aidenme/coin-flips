@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item">
+                <textarea class="category" name="category" id="userInput" oninput="syncText()"></textarea>
+                <span id="printOutput" class="print-only"></span>
+                <div class="circle">+</div>
+            </div>
+            <div class="grid-item">
+                <div class="circle">+</div>
+            </div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+    </body>
+
+    <script>
+        function syncText() {
+            
+            let text = document.getElementById("userInput").value;
+
+            document.getElementById("printOutput").innerHTML = text;
+        }
+    </script>
+</html>
