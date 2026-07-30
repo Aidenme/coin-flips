@@ -83,13 +83,6 @@
     height: 6.5mm;
 }
 
-.applflag {
-    position: absolute;
-    top: 0mm;
-    right: 1mm;
-    height: 10mm;
-}
-
 .circle {
     /*Sets the size and border of the circle*/
     width: 20.5mm;
