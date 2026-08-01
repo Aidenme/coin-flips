@@ -31,6 +31,17 @@
     align-items: center;
 }
 
+.top-type {
+    position: relative;
+    top: 2px;
+    left: 6px;
+    align-self: flex-start;
+    line-height: 1;
+    
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .year {
     position: relative;
     top: 3px;
@@ -53,6 +64,11 @@
     font-size: 14px;
 }
 
+/*"P" looks bad in Lucida (the .mint style text) so this class should be added P mint divs*/
+.p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .note {
     position: static;
     margin-top: 27mm;
@@ -68,19 +84,36 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.flag {
+    position: absolute;
+    top:1.5mm;
+    right:1.5mm;
+    height: 6.5mm;
+}
+
+.value-top {
+    position: absolute;
+    top:8.5mm;
+    right:3mm;
+    height: 6.5mm;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.value-bottom {
+    position: absolute;
+    bottom: 3mm;
+    right: 1mm;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .id {
     position: absolute;
     bottom: 0mm;
     right: 1mm;
     font-size: 10px;
     font-family: 'Courier New', Courier, monospace; font-weight: bold;
-}
-
-.flag {
-    position: absolute;
-    top:1.5mm;
-    right:1.5mm;
-    height: 6.5mm;
 }
 
 .circle {
