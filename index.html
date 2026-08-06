@@ -1,143 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Coin Flips Pro</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        
+        <input type="file" id="csvFileInput" accepts=".csv">
+        
         <div class="grid-container">
             
             <!-- Flip at coordinates (1, 1) -->
             <div class="grid-item">
-                <div class="top-type">Cent</div>
-                <div class="top-type">Lincoln Bicentennial</div>
-                <div class="year" style="top: 0px">1976</div>
-                <div class="mint p">P</div>
-                <img class="flag" src="flags/us.png">
-                <div class="value-top">$.01</div>
-                <div class="note"></div>
-                <div class="id">#129</div>
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="year">2009</div>
+                    <div class="mint">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
                 <div class="circle"><img class="cross" src="cross.png"></div>
+                <div class="center-text">
+                    <div class="note"></div>
+                </div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="note">Early Childhood</div>
+                    <div class="note">Lincoln Bicentennial</div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#46</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (1, 2) -->
+
+            <!-- Flip at coordinates (1, 2)-->
             <div class="grid-item">
-                <div class="top-type">Cent</div>
-                <div class="top-type">Lincoln Bicentennial</div>
-                <div class="year">1976</div>
-                <div class="mint">D</div>
-                <img class="flag" src="flags/us.png">
-                <div class="note"></div>
-                <div class="value-bottom">$.01</div>
-                <div class="id">#130</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">2009</div>
+                    <div class="mint p">P</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
+                <div class="note">Presidency</div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series">Lincoln Bicentennial</div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (1, 3) -->
+
+            <!-- Flip at coordinates (1, 3)-->
             <div class="grid-item">
-                <div class="year">1977</div>
-                <div class="mint">P</div>
-                <img class="flag" src="flags/us.png">
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
                 <div class="note"></div>
-                <div class="bottom-type">Cent</div>
-                <div class="bottom-series">Lincoln Bicentennial</div>
-                <div class="id">#131</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (2, 1) -->
+
+            <!-- Flip at coordinates (2, 1)-->
             <div class="grid-item">
-                <div class="top-type">Quarter Dollar</div>
-                <div class="year">1977</div>
-                <div class="mint">D</div>
-                <img class="flag" src="flags/us.png">
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
                 <div class="note"></div>
-                <div class="bottom-type ttb">Georgia</div>
-                <div class="bottom-series ttb">50 State Quarters</div>
-                <div class="id">#132</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (2, 2) -->
+
+            <!-- Flip at coordinates (2, 2)-->
             <div class="grid-item">
-                <div class="top-type">Cent</div>
-                <div class="year">1978</div>
-                <div class="mint">P</div>
-                <img class="flag" src="flags/us.png">
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
                 <div class="note"></div>
-                <div class="bottom-series">Lincoln Bicentennial</div>
-                <div class="id">#133</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (2, 3) -->
+
+            <!-- Flip at coordinates (2, 3)-->
             <div class="grid-item">
-                <div class="year">1978</div>
-                <div class="mint">D</div>
-                <img class="flag" src="flags/us.png">
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
                 <div class="note"></div>
-                <div class="id">#134</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (3, 1) -->
+
+            <!-- Flip at coordinates (3, 1)-->
             <div class="grid-item">
-                <div class="year">1979</div>
-                <div class="mint">P</div>
-                <img class="flag" src="flags/us.png">
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
                 <div class="note"></div>
-                <div class="id">#135</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
+
             <!-- Flip at coordinates (3, 2)-->
             <div class="grid-item">
-                <div class="year">1979</div>
-                <div class="mint">D</div>
-                <img class="flag" src="flags/us.png">
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
                 <div class="note"></div>
-                <div class="id">#136</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (3, 3) -->
+
+            <!-- Flip at coordinates (3, 3)-->
             <div class="grid-item">
-                <div class="year">2009</div>
-                <div class="mint">D</div>
-                <img class="flag" src="flags/us.png">
-                <div class="note">Professional Life in Illinois</div>
-                <div class="id">#46</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
+                <div class="note"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (4, 1) -->
+
+            <!-- Flip at coordinates (4, 1)-->
             <div class="grid-item">
-                <div class="year">2009</div>
-                <div class="mint">P</div>
-                <img class="flag" src="flags/us.png">
-                <div class="note">Presidency in Washington, DC</div>
-                <div class="id">#47</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
+                <div class="note"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-            
-            <!-- Flip at coordinates (4, 2) -->
+
+            <!-- Flip at coordinates (4, 2)-->
             <div class="grid-item">
-                <div class="year">2009</div>
-                <div class="mint">P</div>
-                <img class="flag" src="flags/us.png">
-                <div class="note">Birth and Early Childhood in Kentucky</div>
-                <div class="id">#44</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
+                <div class="note"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
-             
-            <!-- Flip at coordinates (4, 3) -->
+
+            <!-- Flip at coordinates (4, 3)-->
             <div class="grid-item">
-                <div class="year">2009</div>
-                <div class="mint">D</div>
-                <img class="flag" src="flags/us.png">
-                <div class="note">Birth and Early Childhood in Kentucky</div>
-                <div class="id">#45</div>
-                <div class="circle"><img class="cross" src="cross.png"></div>
+                
+                <!--Top Section-->
+                <div class="top-left-group">
+                    <div class="name"></div>
+                    <div class="year">1976</div>
+                    <div class="mint p">D</div>
+                </div>
+                <div class="top-right-group">
+                    <img class="flag" src="flags/us.png">
+                </div>
+                
+                <!--Middle, removed from grid, items-->
+                <div class="note"></div>
+                <div class="circle coin20-5"><img class="cross" src="cross.png"></div>
+                
+                <!--Bottom Section-->
+                <div class="bottom-left-group">
+                    <div class="series"></div>
+                </div>
+                <div class="bottom-right-group">
+                    <div class="id">#129</div>
+                </div>   
             </div>
         </div>
+
+        <script>
+            const fileInput = document.getElementById('csvFileInput');
+
+            fileInput.onchange = async (event) => {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                const csvText = await file.text();
+
+                const coinDict = processCSV(csvText);
+
+                console.log(coinDict)
+
+            }
+
+            function processCSV(csvText) {
+                const rows = csvText.trim().split('\n');
+                
+                const headerRow = rows[0];
+                
+                const dataRows = rows.slice(1);
+                
+                const headers = headerRow.split(',').map(header => header.trim());
+
+                const coinDataLists = dataRows.map(dataRow => dataRow.split(',').map(dataValue => dataValue.trim()));
+
+                const headerPairs = coinDataLists.map(dataList => dataList.map((data, index) => [headers[index], data || '']))
+
+                return headerPairs.map(pairs => Object.fromEntries(pairs))
+
+            }
+
+            function setCoinValues(coinDict) {
+                
+            }
+
+        </script>
     </body>
 </html>

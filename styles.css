@@ -6,6 +6,11 @@
 
 }
 
+:root {
+    --coin-20-5: 20.5mm;
+    --global-coin: var(--coin-20-5);
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -26,12 +31,53 @@
     margin-top: -1px;
     margin-left: -1px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 80% 20%;
+    grid-template-areas:
+        "top-left    top-right"
+        "bottom-left bottom-right";
+
+    align-items: start;
+    justify-items: start;
+
 }
 
-.top-type {
+.top-left-group {
+    grid-area: top-left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.75mm;
+    margin-left: 1.5mm;
+}
+
+.top-right-group {
+    grid-area: top-right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.bottom-left-group {
+    grid-area: bottom-left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: end;
+    margin-left: 1.5mm;
+    margin-bottom: 0.5mm;
+}
+
+.bottom-right-group {
+    grid-area: bottom-right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.name {
     position: relative;
     top: 2px;
     left: 6px;
@@ -44,19 +90,17 @@
 
 .year {
     position: relative;
-    top: 3px;
-    left: 5px;
     align-self: flex-start;
     line-height: 1;
 
     font-family: 'Segoe UI';
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .mint {
     position: relative;
-    top: 4px;
-    left: 9px;
+    top: 0.5mm;
+    left: 1mm;
     align-self: flex-start;
     line-height: 1;
 
@@ -69,7 +113,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.note {
+/*This was how I styled the center text. The text theme is coming together though so now I want a class for "note" style text
+anyway. Also this isn't lining up properly after I changed to grid mode anyway. Leaving it here for reference, but when I get
+the center text style working without this I can delete this*/
+.old-note {
     position: static;
     margin-top: 27mm;
 
@@ -84,6 +131,21 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.center-text {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin-top: calc((var(--coin-size, var(--global-coin)) / 2) + var(--headspace, 4.5mm))
+}
+
+.coin20-5 { --coin-size: var(--coin-20-5); --headspace: 4.5mm;}
+
+.note {
+    line-height:  1;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .flag {
     position: absolute;
     top:1.5mm;
@@ -91,26 +153,8 @@
     height: 6.5mm;
 }
 
-.value-top {
-    position: absolute;
-    top:8.5mm;
-    right:3mm;
-    height: 6.5mm;
-    font-size: 12px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.value-bottom {
-    position: absolute;
-    bottom: 3mm;
-    right: 1mm;
-    font-size: 12px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.bottom-type {
+.series-type {
     position: relative;
-    bottom: -15px;
     left: 6px;
     align-self: flex-start;
     line-height: 1;
@@ -119,9 +163,8 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.bottom-series {
+.series {
     position: relative;
-    bottom: -15px;
     left: 6px;
     align-self: flex-start;
     line-height: 1;
@@ -144,10 +187,10 @@
 
 .circle {
     /*Sets the size and border of the circle*/
-    width: 20.5mm;
-    height: 20.5mm;
+    width: var(--coin-size, var(--global-coin));
+    height: var(--coin-size, var(--global-coin));
     /*Border none so I don't get lines on cut outs. Set to 1px solid if you want to see it for reference*/
-    border: none;
+    border: solid;
     border-radius: 50%;
     /*Centers the circle and prevents it from influencing anything*/
     position: absolute;
