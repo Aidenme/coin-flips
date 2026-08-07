@@ -359,37 +359,44 @@
 
                 const coinDicts = processCSV(csvText);
 
-                coinDicts.forEach(coin => setCoinValue(coin))
+                coinDicts.forEach(coinDict => setCoinValue(coinDict))
 
             }
 
             function processCSV(csvText) {
                 const rows = csvText.trim().split('\n');
                 
-                const headerRow = rows[0];
-                
+                /*Get rows based on what they contain*/
+                const headerRow = rows[0]; 
                 const dataRows = rows.slice(1);
                 
+                /*Get individual headers and clean them*/
                 const headers = headerRow.split(',').map(header => header.trim());
-
+                
+                /*Get an array of clean coin data arrays*/
                 const coinDataLists = dataRows.map(dataRow => dataRow.split(',').map(dataValue => dataValue.trim()));
 
+                /*Pair each member (value) of the coin data arrays with the associated header (key) in two member arrays*/
                 const headerPairs = coinDataLists.map(dataList => dataList.map((data, index) => [headers[index], data || '']))
 
+                /*This magic javascript function takes the data/header pairs and makes them into dicts (javascript Objects)*/
                 return headerPairs.map(pairs => Object.fromEntries(pairs))
 
             }
 
             function setCoinValue(coinDict) {
                 
+                /*Pick the working flip based on the coordinates given in the csv*/ 
                 const flip = document.getElementById(coinDict['Flip']);
 
+                /*Set all the notes since they all have the same class*/
                 const notes = flip.querySelectorAll('.note')
                 notes[0].innerHTML = coinDict['Top Note'];
                 notes[1].innerHTML = coinDict['Center Note'];
                 notes[2].innerHTML = coinDict['Bottom Note A'];
                 notes[3].innerHTML = coinDict['Bottom Note B'];
 
+                /*Set all the unique classes*/
                 flip.querySelector('.year').innerHTML = coinDict['Year'];
                 flip.querySelector('.mint').innerHTML = coinDict['Mint'];
                 flip.querySelector('.flag').src = `flags/${coinDict['Flag']}.png`;
