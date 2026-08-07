@@ -8,6 +8,7 @@
         
         <input type="file" id="csvFileInput" accepts=".csv">
         
+        <!--All of the coin flips-->
         <div class="grid-container">
             
             <!-- Flip at coordinates (1, 1) -->
@@ -359,6 +360,8 @@
 
                 const coinDicts = processCSV(csvText);
 
+                console.log(coinDicts)
+
                 coinDicts.forEach(coinDict => setCoinValue(coinDict))
 
             }
@@ -388,6 +391,8 @@
                 
                 /*Pick the working flip based on the coordinates given in the csv*/ 
                 const flip = document.getElementById(coinDict['Flip']);
+
+                flip.style.setProperty('--coin-size', coinDict['Window Size'])
 
                 /*Set all the notes since they all have the same class*/
                 const notes = flip.querySelectorAll('.note')

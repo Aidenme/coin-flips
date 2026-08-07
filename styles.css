@@ -6,11 +6,6 @@
 
 }
 
-:root {
-    --coin-20-5: 20.5mm;
-    --global-coin: var(--coin-20-5);
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -132,14 +127,13 @@ the center text style working without this I can delete this*/
 }
 
 .center-text {
+    --headspace: 4.5mm
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    margin-top: calc((var(--coin-size, var(--global-coin)) / 2) + var(--headspace, 4.5mm))
+    margin-top: calc((var(--coin-size) / 2) + var(--headspace, 4.5mm))
 }
-
-.coin20-5 { --coin-size: var(--coin-20-5); --headspace: 4.5mm;}
 
 .note {
     line-height:  1;
@@ -187,8 +181,8 @@ the center text style working without this I can delete this*/
 
 .circle {
     /*Sets the size and border of the circle*/
-    width: var(--coin-size, var(--global-coin));
-    height: var(--coin-size, var(--global-coin));
+    width: var(--coin-size);
+    height: var(--coin-size);
     /*Border none so I don't get lines on cut outs. Set to 1px solid if you want to see it for reference*/
     border: solid;
     border-radius: 50%;
