@@ -20,7 +20,7 @@
 
 }
 
-/*To hide the flips before they are filled from the cvs*/
+/*Applied to various things. Flips before the cvs makes them, window guidelines when I don't want to see them*/
 .hidden {visibility: hidden;}
 
 .grid-item {
@@ -188,6 +188,9 @@
     align-items: center;
     font-size: 80px;
 }
+
+/*Turns off the border for the circle to make guides disappear when not needed*/
+.hide-guide {border: none;}
 
 .cross {
 

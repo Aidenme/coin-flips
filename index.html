@@ -433,6 +433,12 @@
                 flip.querySelector('.mint').innerHTML = coinDict['Mint'];
                 flip.querySelector('.flag').src = `flags/${coinDict['Flag']}.png`;
                 flip.querySelector('.id').innerHTML = `#${coinDict['ID']}`;
+            
+                /*If guidelines are turned off, hides them*/
+                const circle = flip.querySelector('.circle')
+                    if (coinDict['Guideline'] == 'off') {
+                        circle.classList.add('hide-guide')
+                    }
 
             }
 
