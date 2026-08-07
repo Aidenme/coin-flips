@@ -4,6 +4,9 @@
         margin:10mm;
     }
 
+    #csvFileInput {
+        display: none;
+    }
 }
 
 .grid-container {
@@ -14,7 +17,11 @@
     /*Offsets the negative margins for the whole grid that are needed to do a "border collapse" in .grid-item*/
     padding-top: 1px;
     padding-left: 1px;
+
 }
+
+/*To hide the flips before they are filled from the cvs*/
+.hidden {visibility: hidden;}
 
 .grid-item {
     position: relative;
@@ -108,26 +115,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*This was how I styled the center text. The text theme is coming together though so now I want a class for "note" style text
-anyway. Also this isn't lining up properly after I changed to grid mode anyway. Leaving it here for reference, but when I get
-the center text style working without this I can delete this*/
-.old-note {
-    position: static;
-    margin-top: 27mm;
-
-    width: auto;
-    max-width: 80%;
-    padding: 2mm 4mm;
-    
-    text-align: center;
-    border-radius: 4px;
-
-    font-size: 12px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 .center-text {
-    --headspace: 4.5mm
+    --headspace: 4.5mm;
     position: absolute;
     top:50%;
     left:50%;
